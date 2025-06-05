@@ -26,24 +26,17 @@ export default {
 
       colors: {
         'granite': '#707070',
-        'crimson': '#ed5e5e',
-        'sky': '#39a5e4'
       },
 
       fontFamily: {
-        'poppins': ['Poppins', ...defaultTheme.fontFamily.sans],
+        'source-sans': ['Source Sans 3', ...defaultTheme.fontFamily.sans],
       },
 
       fontSize: {
-        'xs': '1rem',        // 16px
-        'sm': '1.125rem',    // 18px
-        'md': '1.25rem',     // 20px
-        'lg': '1.375rem',    // 22px
-        'xl': '2.0625rem',   // 33px
-        '2xl': '2.4375rem',  // 39px
-        '3xl': '2.8125rem',  // 45px
-        '4xl': '3.125rem',   // 50px
-        '5xl': '4.375rem',   // 70px
+        'sm': '1.25rem',     // 20px
+        'md': '1.875rem',    // 30px
+        'lg': '3.125rem',    // 50px
+        'xl': '6.25rem',     // 100px
       }
 
     },
