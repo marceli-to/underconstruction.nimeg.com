@@ -7,17 +7,33 @@
     <h1 class="text-lg lg:text-xl leading-[1.1] lg:leading-[1.15] max-w-lg lg:max-w-4xl mx-auto mb-60 lg:tracking-wide">
       Hier entsteht unsere neue Webseite
     </h1>
-    <p class="text-balance">Unsere aktuellen Stellenausschreibungen finden sie hier:</p>
+    <div class="text-balance mb-30 lg:mb-50">Unsere aktuellen Stellenausschreibungen finden sie hier:</div>
 
-    {{ collection:jobs }}
-      <p>{{ entry.title }}</p>
+    {{ collection:jobs as="jobs" }}
+      {{ if no_results }}
+          <p>Zur Zeit sind alle unnsere Stellen besetzt.</p>
+      {{ else }}
+        <div class="flex flex-col gap-y-10">
+          {{ jobs }}
+            <a 
+              href=""
+              title="{{ title }}"
+              target="_blank"
+              class="text-balance block no-underline hover:underline underline-offset-2">
+              {{ title }}
+            </a>
+          {{ /jobs }}
+        </div>
+      {{ /if }}
     {{ /collection:jobs }}
   </div>
+
   <address class="text-center not-italic">
     nimeg ag<br>
     Täfernstrasse 14a<br>
     5405 Baden Dättwil <br>
-    info@nimeg.com<br>
-    +41 62 873 50 25<br>
+    <a href="mailto:info@nimeg.com" title="Schreiben Sie uns" class="no-underline hover:underline underline-offset-2" target="_blank">info@nimeg.com</a><br>
+    <a href="tel:+41628735025" title="Rufen Sie uns an" class="no-underline hover:underline underline-offset-2" target="_blank">+41 62 873 50 25</a>
   </address>
+
 </section>
