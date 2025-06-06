@@ -7,13 +7,13 @@
     <h1 class="text-lg lg:text-xl leading-[1.1] lg:leading-[1.15] max-w-lg lg:max-w-4xl mx-auto mb-60 lg:tracking-wide">
       Hier entsteht unsere neue Webseite
     </h1>
-    <div class="text-balance mb-30 lg:mb-50">Unsere aktuellen Stellenausschreibungen finden sie hier:</div>
+    <div class="text-balance mb-30 lg:mb-50">Aktuellen Stellenausschreibungen:</div>
 
     {{ collection:jobs as="jobs" }}
       {{ if no_results }}
           <p>Zur Zeit sind alle unnsere Stellen besetzt.</p>
       {{ else }}
-        <div class="flex flex-col gap-y-10">
+        <div class="flex flex-col gap-y-5">
           {{ jobs }}
             <a 
               href="{{ advert }}"
